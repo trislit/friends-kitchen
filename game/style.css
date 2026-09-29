@@ -1,0 +1,212 @@
+.kitchen-game { position: relative; width: 100%; height: 100%; overflow: hidden; color: #2b2118; background: #c9b49a; font: 14px/1.35 ui-monospace, monospace; }
+.kitchen-room { position: absolute; inset: 0; }
+.kitchen-room:focus { outline: none; }
+.kitchen-wall { position: absolute; inset: 0 0 58% 0; pointer-events: none; background:
+  linear-gradient(#d7e4ea 0 0) 0 0 / 28px 28px,
+  linear-gradient(90deg, transparent 26px, #b7c9d1 26px 28px, transparent 28px) 0 0 / 28px 28px,
+  linear-gradient(#8ea8b4 0 0); }
+.kitchen-floor { position: absolute; left: 0; right: 0; bottom: 0; height: 62%; pointer-events: none; background:
+  linear-gradient(#c9844a, #a86b38); }
+.kitchen-hud { position: absolute; z-index: 6; inset: 10px 12px auto; display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; pointer-events: none; }
+.kitchen-hud span { background: #fff8ee; padding: 8px; border: 2px solid #2b2118; }
+.cafe-sign { position: absolute; left: 50%; top: 0; transform: translateX(-50%); margin: 0; padding: 6px 16px 8px; background: linear-gradient(#8d5a34, #6e4528); color: #fff8ee; border: 3px solid #2b2118; box-shadow: inset 0 -4px 0 #c9a27a, 0 4px 0 #4a3420; font-size: 18px; font-weight: 700; letter-spacing: 0.06em; white-space: nowrap; pointer-events: none; }
+.kitchen-hud button { pointer-events: auto; }
+.kitchen-game button, .kitchen-loading button { font: inherit; cursor: pointer; padding: 8px 10px; border: 2px solid #2b2118; background: #fff8ee; color: #2b2118; }
+.kitchen-game button:disabled { cursor: default; opacity: .5; }
+.kitchen-game button.rf-frame-primary { background: #ffb703; }
+.appliance, .counter, .book { position: absolute; z-index: 3; }
+.fridge { left: 2%; top: 18%; width: 16%; height: 28%; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 6px; color: #1d2428; background: linear-gradient(#f7fbff, #d5dee6); box-shadow: inset -10px 0 0 #c5d0d8, inset 0 14px 0 #eef3f7; }
+.fridge .appliance-face { position: absolute; inset: 8% 12% auto auto; width: 6px; height: 34%; border-radius: 4px; background: #5c6b73; }
+.kitchen-game button.book, .kitchen-game button.computer { padding: 0; border: 0; background: transparent; color: #2b2118; }
+.book { left: 18%; top: 13%; width: 14%; height: 22%; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; gap: 2px; }
+.notebook { position: relative; width: 86%; height: 74%; pointer-events: none; background: #2f5f86; border: 2px solid #2b2118; border-radius: 3px 8px 8px 3px; box-shadow: 5px 6px 0 rgba(43, 33, 24, .28); transform: rotate(-6deg); }
+.spiral { position: absolute; z-index: 2; left: -4%; top: 6%; bottom: 6%; width: 22%; display: flex; flex-direction: column; justify-content: space-between; }
+.spiral i { display: block; width: 100%; height: 7px; border: 2px solid #6d7378; border-radius: 8px; background: linear-gradient(#f4f6f8, #b7bdc2); box-shadow: 1px 1px 0 #2b2118; }
+.notebook-page { position: absolute; inset: 9% 7% 8% 18%; background: #fffef8; border: 2px solid #2b2118; background-image: repeating-linear-gradient(transparent 0 7px, #b9cdee 7px 8px); background-position: 0 10px; }
+.notebook-margin { position: absolute; left: 16%; top: 0; bottom: 0; width: 2px; background: #e07a7a; }
+.pencil { position: absolute; right: -8%; bottom: 6%; width: 7px; height: 62%; background: linear-gradient(#f4d35e 0 74%, #e07a3d 74% 86%, #f7f3ea 86% 94%, #2b2118 94%); border-radius: 1px; transform: rotate(16deg); box-shadow: 1px 1px 0 #2b2118; }
+.counter.prep { left: 2%; top: 46%; width: 24%; height: 24%; }
+.counter.serve { left: 28%; top: 38%; width: 50%; height: 28%; }
+.kitchen-game button.counter-top { position: absolute; display: flex; align-items: flex-end; justify-content: center; padding: 6px; border: 0; color: #1d2428; }
+.counter.prep .counter-top { inset: 0 0 30% 0; background:
+  linear-gradient(115deg, rgba(255, 255, 255, .9), transparent 28%),
+  linear-gradient(#f4f7f8, #d5dcde 42%, #eef2f3 58%, #b7c1c5);
+  border: 2px solid #5e686c; border-radius: 2px; box-shadow: inset 0 2px 0 #fff, 0 4px 0 #7a8488; }
+.steel-lip { position: absolute; left: 0; right: 0; top: 0; height: 16%; pointer-events: none; background: linear-gradient(#8b9498, #e7ecee 45%, #6d767a); border-bottom: 2px solid #4e565a; }
+.steel-legs { position: absolute; inset: 62% 6% 0; pointer-events: none; }
+.steel-legs i { position: absolute; top: 0; bottom: 0; width: 7px; border-radius: 4px; background: linear-gradient(90deg, #7e878b, #f5f7f8 46%, #5f686c); border: 1px solid #4e565a; }
+.steel-legs i:nth-child(1) { left: 0; }
+.steel-legs i:nth-child(2) { left: 22%; }
+.steel-legs i:nth-child(3) { right: 22%; }
+.steel-legs i:nth-child(4) { right: 0; }
+.steel-shelf { position: absolute; left: 4%; right: 4%; bottom: 28%; height: 18%; background: linear-gradient(#dfe5e7, #b4bec2); border: 2px solid #5e686c; }
+.counter.prep .plated { top: 22%; }
+.counter.serve .counter-top { inset: 0 0 24% 0; background:
+  linear-gradient(180deg, #fbf7f0 0 18%, transparent 18%),
+  repeating-linear-gradient(90deg, #ecdab6 0 10px, #f6e7cc 10px 12px);
+  border: 3px solid #5a3e24; box-shadow: 0 5px 0 #4a3420; color: #2b2118; }
+.store-face { position: absolute; left: 0; right: 0; top: 0; height: 28%; pointer-events: none; background: linear-gradient(#8d5a34, #6a4124); border-bottom: 3px solid #2b2118; box-shadow: inset 0 -6px 0 #c9a27a; }
+.store-panel { position: absolute; left: 8%; right: 8%; top: 18%; bottom: 28%; background: #f4efe4; border: 2px solid #2b2118; box-shadow: inset 0 0 0 3px #2f6f4e; }
+.store-bell { position: absolute; right: 14px; top: 34%; width: 16px; height: 16px; pointer-events: none; border-radius: 50%; border: 2px solid #2b2118; background: radial-gradient(circle at 35% 30%, #fff6d2, #e0b23a 42%, #8d6914); }
+.store-bell::after { content: ""; position: absolute; left: 2px; right: 2px; bottom: -5px; height: 4px; background: #2b2118; border-radius: 1px; }
+.store-base { position: absolute; left: 3%; right: 3%; bottom: 0; height: 24%; display: flex; pointer-events: none; background: #f7f1e6; border: 2px solid #5a3e24; }
+.store-base i { flex: 1; border-right: 2px solid #5a3e24; background: linear-gradient(#c9a27a, #c9a27a) 18% 22% / 64% 3px no-repeat; }
+.store-base i:last-child { border-right: 0; }
+.heat-lamps { position: absolute; z-index: 2; left: 16%; right: 16%; top: -18px; display: flex; justify-content: space-evenly; pointer-events: none; }
+.heat-lamp { position: relative; width: 36px; height: 18px; border: 2px solid #2b2118; border-radius: 12px 12px 4px 4px; background: radial-gradient(circle at 50% 80%, #ffe08a, #e85d04 58%, #7a2e0e); box-shadow: 0 10px 12px rgba(232, 93, 4, .4); }
+.heat-lamp::before { content: ""; position: absolute; left: 50%; top: -10px; width: 2px; height: 10px; margin-left: -1px; background: #2b2118; }
+.tip-jar { position: absolute; z-index: 2; left: 12px; top: 38%; width: 16px; height: 26px; pointer-events: none; border: 2px solid #2b2118; border-radius: 2px 2px 5px 5px; background: linear-gradient(90deg, rgba(255, 255, 255, .75), transparent 42%), linear-gradient(#fff4c2 0 55%, #e0b23a 55% 100%); }
+.counter.serve .pass { top: 32%; }
+.plated, .pass { position: absolute; left: 8px; right: 8px; top: 8px; display: flex; flex-wrap: wrap; gap: 4px; margin: 0; padding: 0; list-style: none; pointer-events: none; }
+.pass-dish { padding: 2px 4px; background: #fff8ee; border: 2px solid #2b2118; font-size: 11px; }
+.pass-dish.is-turning { background: #f6c945; }
+.pass-dish.is-spoiled { background: #8d6e63; color: #fff8ee; }
+.computer { right: 1%; top: 14%; width: 16%; height: 36%; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; gap: 2px; }
+.pc { width: 100%; height: 86%; display: flex; flex-direction: column; align-items: center; pointer-events: none; }
+.pc-monitor { position: relative; width: 88%; height: 58%; padding: 7% 7% 12%; background: linear-gradient(#3c434b, #24282d); border: 2px solid #15181b; border-radius: 6px 6px 3px 3px; box-shadow: 0 4px 0 #15181b; }
+.pc-screen { width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: center; gap: 7%; padding: 8% 8% 6%; background: #07241c; border-radius: 2px; box-shadow: inset 0 0 10px rgba(90, 255, 170, .35); color: #9dffc3; font-size: 8px; letter-spacing: .08em; }
+.pc-screen b { font-weight: 700; }
+.pc-screen i { display: block; height: 11%; background: #7dffa8; }
+.pc-screen i:nth-child(3) { width: 72%; }
+.pc-screen i:nth-child(4) { width: 46%; opacity: .55; }
+.pc-led { position: absolute; left: 50%; bottom: 5%; width: 6px; height: 6px; margin-left: -3px; border-radius: 50%; background: #3dff8a; box-shadow: 0 0 6px #3dff8a; }
+.pc-neck { width: 16%; height: 7%; background: linear-gradient(#5c656e, #2a2f35); }
+.pc-base { width: 48%; height: 5%; background: #24282d; border-radius: 0 0 6px 6px; box-shadow: 0 2px 0 #15181b; }
+.pc-keyboard { width: 76%; height: 14%; margin-top: 5%; border: 2px solid #2b2118; border-radius: 3px 3px 5px 5px; background:
+  linear-gradient(#2b2118, #2b2118) 8% 62% / 84% 18% no-repeat,
+  repeating-linear-gradient(90deg, #2b2118 0 1px, transparent 1px 7px),
+  repeating-linear-gradient(#2b2118 0 1px, transparent 1px 5px),
+  linear-gradient(#e7edf2, #c5ced6); }
+.is-here { outline: 3px solid #ffb703; outline-offset: 2px; }
+.kitchen-door { position: absolute; z-index: 1; top: 14%; left: 50%; width: 58px; height: 86px; transform: translateX(-50%); display: grid; place-items: end center; padding-bottom: 6px; pointer-events: none; background: linear-gradient(#8d5a34, #6e4528); border: 3px solid #2b2118; box-shadow: inset 0 0 0 6px #c9a27a; color: #fff8ee; font-size: 11px; }
+.short-label { display: none; }
+.kitchen-friend { position: absolute; z-index: 5; bottom: 88px; width: 120px; height: 120px; transition: left .35s ease; }
+.kitchen-reduced .kitchen-friend { transition: none; }
+.kitchen-friend.at-fridge { left: 2%; }
+.kitchen-friend.at-prep { left: 8%; }
+.kitchen-friend.at-book { left: 20%; }
+.kitchen-friend.at-serve { left: 42%; }
+.kitchen-friend.at-computer { left: 74%; }
+.kitchen-friend canvas { width: 120px; height: 120px; image-rendering: pixelated; background: transparent; }
+.kitchen-friend p, .kitchen-friend button { position: absolute; left: 0; top: 0; width: max-content; font-size: 10px; background: #fff8ee; }
+.customer-lane { position: absolute; z-index: 4; inset: 0; pointer-events: none; }
+.customer { position: absolute; width: 84px; margin-left: -42px; text-align: center; transition: top .6s ease, left .6s ease, transform .6s ease; }
+.customer.spot-0 { left: 44%; top: 16%; z-index: 5; }
+.customer.spot-1 { left: 54%; top: 14%; z-index: 4; }
+.customer.spot-2 { left: 63%; top: 16%; z-index: 3; }
+.customer.spot-3 { left: 70%; top: 14%; z-index: 2; }
+.customer.spot-4 { left: 76%; top: 16%; z-index: 1; }
+.wave-2.spot-0 { left: 48%; }
+.wave-2.spot-1 { left: 66%; }
+.wave-3.spot-0 { left: 44%; }
+.wave-3.spot-1 { left: 58%; }
+.wave-3.spot-2 { left: 72%; }
+.counter-quiet { position: absolute; z-index: 4; left: 50%; top: 22%; transform: translateX(-50%); margin: 0; padding: 6px 8px; background: #fff8ee; border: 2px solid #2b2118; pointer-events: none; white-space: nowrap; }
+.customer.is-arriving { animation: customer-arrive 1.4s ease; }
+.customer.is-annoyed .order-bubble, .customer.is-leaving .order-bubble { border-color: #c0392b; background: #ffe0d6; }
+.customer-body { animation: customer-sway 2.4s ease-in-out infinite; transform-origin: 50% 100%; }
+.customer.spot-1 .customer-body { animation-duration: 2.1s; animation-delay: -.4s; }
+.customer.spot-2 .customer-body { animation-duration: 2.8s; animation-delay: -.9s; }
+.customer.spot-3 .customer-body { animation-duration: 2.3s; animation-delay: -1.3s; }
+.customer.spot-4 .customer-body { animation-duration: 2.6s; animation-delay: -.2s; }
+.customer.is-annoyed .customer-body { animation-name: customer-fidget; animation-duration: .45s; }
+.customer.is-leaving .customer-body { animation-name: customer-fidget; animation-duration: .28s; }
+.kitchen-reduced .customer { transition: none; animation: none; }
+.kitchen-reduced .customer .customer-body { animation: none; }
+.order-bubble { display: inline-block; max-width: 78px; margin: 0 0 2px; padding: 2px 4px; background: #fff8ee; border: 2px solid #2b2118; font-size: 10px; line-height: 1.15; white-space: normal; }
+.customer-name, .guest-card strong { display: block; font-weight: 700; }
+.guest-card { display: flex; flex-direction: column; min-width: 72px; }
+.patience { display: block; width: 36px; height: 6px; margin: 0 auto 3px; background: #2b2118; }
+.patience i { display: block; height: 100%; background: #1e8449; }
+.customer.is-annoyed .patience i, .customer.is-leaving .patience i { background: #c0392b; }
+.customer-body { position: relative; display: block; width: 36px; height: 58px; margin: 0 auto; }
+.person-hair, .person-head, .person-torso, .person-arm, .person-leg { position: absolute; display: block; }
+.person-hair { left: 22%; top: 0; width: 56%; height: 14%; border-radius: 8px 8px 2px 2px; background: var(--hair, #2b2118); }
+.person-head { left: 25%; top: 10%; width: 50%; height: 26%; border-radius: 50%; background: var(--skin, #f3d2b5); }
+.person-torso { left: 22%; top: 34%; width: 56%; height: 32%; border-radius: 3px 3px 0 0; background: var(--shirt, #3d6b8a); }
+.person-arm { top: 36%; width: 16%; height: 28%; border-radius: 3px; background: var(--shirt, #3d6b8a); }
+.person-arm-left { left: 2%; }
+.person-arm-right { right: 2%; }
+.person-leg { top: 66%; width: 18%; height: 34%; background: #2b2118; }
+.person-leg-left { left: 26%; }
+.person-leg-right { left: 56%; }
+@keyframes customer-arrive { from { opacity: 0; } to { opacity: 1; } }
+@keyframes customer-sway {
+  0%, 100% { transform: translateX(0) rotate(0deg); }
+  35% { transform: translateX(-4px) rotate(-4deg); }
+  70% { transform: translateX(4px) rotate(4deg); }
+}
+@keyframes customer-fidget {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px) rotate(-6deg); }
+  75% { transform: translateX(5px) rotate(6deg); }
+}
+.cash-short { display: none; }
+.kitchen-hint { position: absolute; z-index: 5; top: 64px; left: 12px; right: 12px; margin: 0; text-align: center; background: #fff8ee; font-size: 11px; pointer-events: none; }
+.kitchen-game table { width: 100%; border-collapse: collapse; text-align: left; }
+.kitchen-game th, .kitchen-game td { padding: 4px; border-bottom: 1px solid #ead7b8; }
+.kitchen-mobile-hint { display: none; }
+.kitchen-loading { height: 100%; display: flex; gap: 16px; flex-direction: column; align-items: center; justify-content: center; padding: 24px; text-align: center; background: #d7e4ea; }
+.stock-list { list-style: none; margin: 0 0 12px; padding: 0; }
+.stock-list li { display: flex; align-items: center; gap: 8px; padding: 6px 0; border-bottom: 1px solid #ead7b8; }
+.stock-list button { margin-left: auto; }
+.bit { width: 14px; height: 14px; border: 2px solid #2b2118; display: inline-block; flex: none; }
+.bit.is-held { outline: 2px solid #ffb703; }
+.stock-list li { flex-wrap: wrap; }
+.bit-bread { background: #e6c07b; }
+.bit-butter { background: #ffe08a; }
+.bit-tea { background: #7dcea0; }
+.bit-broth { background: #e59866; }
+.bit-noodles { background: #f5d6a1; }
+.bit-vegetables { background: #58d68d; }
+.bit-spice { background: #e74c3c; }
+.bit-rice { background: #fdf2e9; }
+.kitchen-ticket { text-align: center; }
+.kitchen-ticket h3 { margin-bottom: 8px; }
+@media (max-width: 520px) {
+  .kitchen-hud { inset: 4px 4px auto; gap: 4px; font-size: 9px; }
+  .kitchen-hud span, .kitchen-hud button { padding: 4px; }
+  .cafe-sign { font-size: 11px; padding: 3px 8px 4px; letter-spacing: 0.03em; }
+  .cash-long { display: none; }
+  .cash-short { display: inline; }
+  .order-bubble { font-size: 9px; padding: 2px 4px; }
+  .kitchen-hint { display: none; }
+  .kitchen-mobile-hint { display: inline; }
+  .kitchen-desktop-hint { display: none; }
+  .fridge, .computer, .book { font-size: 8px; line-height: 1.15; padding: 3px 2px; white-space: normal; }
+  .fridge { top: 22%; height: 22%; }
+  .book { left: 22%; top: 18%; width: 13%; height: 15%; }
+  .notebook { height: 72%; transform: none; }
+  .spiral i { height: 4px; }
+  .pencil { height: 50%; }
+  .computer { top: 18%; height: 30%; }
+  .pc-screen { font-size: 6px; }
+  .counter.prep { top: 52%; height: 20%; }
+  .counter.serve { top: 48%; left: 28%; width: 48%; height: 22%; }
+  .counter-top { font-size: 8px; }
+  .steel-legs i { width: 4px; }
+  .store-bell { width: 10px; height: 10px; right: 6px; }
+  .heat-lamps { top: -10px; }
+  .heat-lamp { width: 18px; height: 10px; }
+  .tip-jar { width: 10px; height: 16px; left: 4px; }
+  .pass-dish { font-size: 8px; }
+  .kitchen-door { width: 36px; height: 48px; top: 16%; }
+  .full-label { display: none; }
+  .short-label { display: inline; }
+  .kitchen-friend { width: 56px; height: 56px; bottom: 20px; }
+  .kitchen-friend canvas { width: 56px; height: 56px; }
+  .kitchen-friend.at-fridge { left: 2%; }
+  .kitchen-friend.at-prep { left: 4%; }
+  .kitchen-friend.at-book { left: 18%; }
+  .kitchen-friend.at-serve { left: 40%; }
+  .kitchen-friend.at-computer { left: 70%; }
+  .customer { width: 58px; margin-left: -29px; }
+  .customer.spot-0 { left: 42%; top: 18%; }
+  .customer.spot-1 { left: 58%; top: 18%; }
+  .customer.spot-2 { left: 74%; top: 18%; }
+  .customer.spot-3 { left: 48%; top: 8%; }
+  .customer.spot-4 { left: 64%; top: 8%; }
+  .order-bubble { max-width: 52px; font-size: 7px; padding: 1px 2px; }
+  .patience { width: 18px; height: 3px; }
+  .customer-body { width: 20px; height: 34px; }
+}
