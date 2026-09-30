@@ -2,7 +2,7 @@
 
 Your Rare Friend runs a kitchen: a line of customers orders, you finish dishes on the prep counter, and you carry them to service before they spoil.
 
-**Builder:** [Trislit / @trislit](https://github.com/trislit) · **Category:** Character Spotlight · **SDK:** FriendSDK v0.1.4
+**Builder:** [Trislit / @trislit](https://github.com/trislit) · **Category:** Economy Potential · **SDK:** FriendSDK v0.1.4
 
 You play as your own Generations NFT, using its original character artwork. Connect a wallet, choose your Friend, and cook. Supply orders spend simulated $RAREFRIENDS. Customer payments are simulated and depend on whether the dish was made correctly. [Menu](game/game.json) · [Asset notices](NOTICE.md)
 
@@ -17,7 +17,7 @@ npm run dev
 
 Open the printed URL (normally `http://127.0.0.1:4173`), connect your wallet, and select your Friend. The SDK verifies ownership before play. No RF funding or transaction signature is needed for this simulated preview.
 
-Source for this build is this project directory. A public repository and playable preview are not published yet.
+Source: [github.com/trislit/friends-kitchen](https://github.com/trislit/friends-kitchen). Playable preview: [trislit.github.io/friends-kitchen](https://trislit.github.io/friends-kitchen/).
 
 ## Play
 

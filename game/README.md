@@ -2,7 +2,7 @@
 
 Your Rare Friend runs a kitchen: a line of customers orders, you finish dishes on the prep counter, and you carry them to service before they spoil.
 
-**Builder:** [Trislit / @trislit](https://github.com/trislit) · **Category:** Character Spotlight · **SDK:** FriendSDK v0.1.4
+**Builder:** [Trislit / @trislit](https://github.com/trislit) · **Category:** Economy Potential · **SDK:** FriendSDK v0.1.4
 
 You play as your own Generations NFT, using its original character artwork. The SDK runtime connects the wallet and checks that the selected Friend is a hardwired Generations NFT (generation ≥ 1) on Robinhood mainnet. Supply orders use the fixed preview client. Customer payments are decided in the kitchen, not by a chance roll. [Rules file](game.json) · [Notices](../NOTICE.md)
 

@@ -30,10 +30,12 @@ That is the promotion: RF is what keeps the cafe open. You earn it by serving yo
 In a live version, those same prices would spend RF from the player's wallet or the Friend's wallet. Ingredient orders, heat lamps, and the tip jar are the natural fee events. Following the protocol split, half of each purchase can burn and half can fund rewards, so kitchen traffic pays active Friends. Dish tabs can pay the cooking Friend's own wallet. The preview does not do that. Token Activity is not claimed. Organizers have not said how simulated spending will be scored for that category.
 
 **Source code**
-This project, FriendSDK v0.1.4. A public repository is not published yet.
+[github.com/trislit/friends-kitchen](https://github.com/trislit/friends-kitchen), FriendSDK v0.1.4.
 
 **Playable demo / how to run**
-A hosted preview is not published yet. With Node.js 22+:
+[https://trislit.github.io/friends-kitchen/](https://trislit.github.io/friends-kitchen/)
+
+To run it locally with Node.js 22+:
 
 ```sh
 npm ci
@@ -52,7 +54,7 @@ All of the amounts above are simulated and labeled in the game. Customer payment
 `npm test`, `npm run typecheck`, `npm run check:games`, and `npm run check:browser` pass. Browser checks cover a desktop width and a phone width with the SDK's mocked wallet, including cook, serve, pay, restock, mute, and reduced motion. A real-wallet playthrough is still outstanding.
 
 **Known limitations**
-Progress resets when the session ends. No live contracts, burns, trading, wearable NFTs, or creator fees. The public repo and hosted preview still need to be added before this letter can be filed. Production publication needs a separate Rare Friends review.
+Progress resets when the session ends. No live contracts, burns, trading, wearable NFTs, or creator fees. Production publication needs a separate Rare Friends review.
 
 **Credits**
 Kitchen surfaces, customers, the notebook, the computer, the counters, and the music loop are original. The Friend uses canonical Generations sprites. Cue sounds are the FriendSDK v0.1.4 kit. See `NOTICE.md`.
